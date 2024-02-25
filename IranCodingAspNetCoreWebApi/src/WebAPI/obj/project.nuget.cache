@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "dgSpecHash": "C8IP7ezqatOKdkxOAZ8l3xC8oJDrXzoUQftJzvxsMz36js+iVW0OCnXz2gk/r3Rkhstz69GrRo7cj4oMZ3Bc9w==",
+  "success": false,
+  "projectFilePath": "D:\\IranCoding\\Projects\\Sever Side\\DotNet\\Asp Core\\Web Api\\AspNetCore_WebApi\\IranCodingAspNetCoreWebApi\\src\\WebAPI\\WebAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Developer6669\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.16\\microsoft.aspnetcore.openapi.7.0.16.nupkg.sha512",
+    "C:\\Users\\Developer6669\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Developer6669\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\Developer6669\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\Developer6669\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\Developer6669\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\Developer6669\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'D:\\IranCoding\\Projects\\Sever Side\\DotNet\\Asp Core\\Web Api\\AspNetCore_WebApi\\IranCodingAspNetCoreWebApi\\src\\src\\Infrastructure\\Infrastructure.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "D:\\IranCoding\\Projects\\Sever Side\\DotNet\\Asp Core\\Web Api\\AspNetCore_WebApi\\IranCodingAspNetCoreWebApi\\src\\src\\Infrastructure\\Infrastructure.csproj",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'D:\\IranCoding\\Projects\\Sever Side\\DotNet\\Asp Core\\Web Api\\AspNetCore_WebApi\\IranCodingAspNetCoreWebApi\\src\\src\\Application\\Application.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "D:\\IranCoding\\Projects\\Sever Side\\DotNet\\Asp Core\\Web Api\\AspNetCore_WebApi\\IranCodingAspNetCoreWebApi\\src\\src\\Application\\Application.csproj",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
+}
