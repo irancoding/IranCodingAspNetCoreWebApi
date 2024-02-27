@@ -9,13 +9,15 @@
   <ItemGroup>
     <Folder Include="Behaviours\" />
     <Folder Include="Commands\" />
-    <Folder Include="Contracts\" />
     <Folder Include="Exceptions\" />
     <Folder Include="Mappings\" />
-    <Folder Include="Models\" />
     <Folder Include="Queries\" />
     <Folder Include="Validators\" />
     <Folder Include="Wrappers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
   </ItemGroup>
 
   <ItemGroup>
