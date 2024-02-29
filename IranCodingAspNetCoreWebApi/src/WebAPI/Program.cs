@@ -1,12 +1,46 @@
 using Infrastructure;
 using Infrastructure.Persistence;
+using Microsoft.AspNetCore.Mvc.Controllers;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+	.ConfigureApiBehaviorOptions(options =>
+	{
+		options.InvalidModelStateResponseFactory = (context) =>
+		{
+			var responseObj = new
+			{
+				Path = context.HttpContext.Request.Path.ToString(),
+				method = context.HttpContext.Request.Method.ToString(),
+				controller = (context.ActionDescriptor as ControllerActionDescriptor)?.ControllerName,
+				action = (context.ActionDescriptor as ControllerActionDescriptor)?.ActionName,
+				errors = context.ModelState.Keys.Select(x =>
+				{
+					return new
+					{
+						field = x,
+						message = context.ModelState[x].Errors.Select(c => c.ErrorMessage)
+					};
+				})
+			};
+
+			var logger = context.HttpContext.RequestServices.GetRequiredService<ILogger<Program>>();
+			logger.LogError("model state error");
+
+			return new BadRequestObjectResult(responseObj);
+		};
+
+		//diable auto modelState invalid filter=true
+		options.SuppressModelStateInvalidFilter = false;
+
+		// Disable inference rules=true
+		options.SuppressInferBindingSourcesForParameters = false;
+	});
 
 builder.Services.AddInfrastructureServices(builder.Configuration);
 

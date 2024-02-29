@@ -9,10 +9,11 @@ namespace WebAPI.Controllers
     [ApiController]
     public class ToDoAPIController : ControllerBase
     {
-        [HttpPost]
-        public IActionResult CreateToDo(ToDoDto dto)
+        [HttpPost("{headerRoute?}")]
+        public IActionResult CreateToDo(ToDoDto dto, [FromHeader]string? headerTitle, 
+                                        [FromRoute] string? headerRoute, [FromQuery]string? queryTitle)
         {
-            return Ok();
+            return Ok("This is ok");
         }
-    }
+	}
 }
